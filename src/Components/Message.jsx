@@ -47,6 +47,8 @@ const Message = () => {
         setMessageToDelete(null);
     };
 
+    
+
     return (
         <div className="message-container">
             <div className="container">
@@ -65,7 +67,7 @@ const Message = () => {
                             const timeString = msg.timestamp
                                 ? new Date(msg.timestamp).toLocaleTimeString()
                                 : '';
-                            const isParikshit = msg.username === 'Parikshit';
+                            const isParikshit = msg.username === 'Parikshit' || msg.username === 'parikshit';
 
                             return (
                                 <div
