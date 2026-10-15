@@ -1,0 +1,3 @@
+.app-shell {
+  @apply min-h-screen bg-background;
+}

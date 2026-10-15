@@ -1,0 +1,8 @@
+.mongodb-data/
+node_modules/
+.env
+*.log
+*.pid
+*.out
+*.err
+coverage/

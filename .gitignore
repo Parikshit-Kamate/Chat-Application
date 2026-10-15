@@ -1,23 +1,24 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Workspace-local tooling
+/.codex
+/.agents/
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# Dependencies and generated output
+**/node_modules/
+**/coverage/
+**/build/
+**/dist/
 
-# testing
-/coverage
+# Local environment and runtime files
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+*.log
+*.pid
+*.out
+*.err
 
-# production
-/build
-
-# misc
+# Editor and operating-system files
+**/.vscode/
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
