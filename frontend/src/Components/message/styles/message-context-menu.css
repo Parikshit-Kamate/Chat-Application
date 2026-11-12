@@ -1,0 +1,30 @@
+.message-context-menu {
+    @apply fixed z-[90] min-w-[172px] overflow-hidden rounded-[0.35rem] border bg-popover text-popover-foreground shadow-popover;
+    border-color: hsl(200 8% 84%);
+  }
+
+.message-context-menu button {
+    @apply flex w-full items-center gap-2.5 border-0 border-b bg-transparent px-3.5 py-3 text-left text-sm font-semibold text-foreground;
+  }
+
+.message-context-menu button:last-child {
+    @apply border-b-0;
+  }
+
+.message-context-menu button:hover:not(:disabled) {
+    @apply bg-muted;
+  }
+
+.message-context-menu button:disabled {
+    @apply cursor-not-allowed bg-muted/70 text-muted-foreground;
+  }
+
+.message-context-menu button.danger {
+    @apply text-destructive;
+  }
+
+.delivery-state,
+  .status-seen {
+    @apply inline-flex items-center;
+    color: hsl(197 92% 47%);
+  }

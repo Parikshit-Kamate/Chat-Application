@@ -1,0 +1,68 @@
+.group-chat-panel {
+    background: hsl(198 34% 97%);
+  }
+
+.group-chat-panel .chat-messages {
+    @apply gap-2;
+  }
+
+.group-chat-panel .message-stack {
+    max-width: min(58%, 640px);
+  }
+
+.group-chat-panel .message-sender-inline {
+    @apply mb-1.5 text-[13px] font-bold leading-4;
+    color: hsl(199 22% 38%);
+  }
+
+.group-chat-panel .message-bubble {
+    @apply min-w-[92px] px-3 py-2;
+    border-radius: 0.45rem;
+    box-shadow: 0 1px 0.5px hsl(0 0% 0% / 0.16);
+  }
+
+.group-chat-panel .message-row.theirs .message-bubble {
+    background: hsl(0 0% 100%);
+    border-top-left-radius: 0.05rem;
+  }
+
+.group-chat-panel .message-row.mine .message-bubble {
+    background: linear-gradient(180deg, hsl(111 91% 91%), hsl(105 86% 88%));
+    border-top-right-radius: 0.05rem;
+  }
+
+.group-chat-panel .message-row.theirs .message-bubble::before {
+    left: -8px;
+    color: hsl(0 0% 100%);
+    border-left-width: 9px;
+    border-top-width: 9px;
+  }
+
+.group-chat-panel .message-row.mine .message-bubble::before {
+    right: -8px;
+    color: hsl(111 91% 91%);
+    border-right-width: 9px;
+    border-top-width: 9px;
+  }
+
+.group-chat-panel .message-bubble p {
+    @apply text-[14.5px] leading-[1.45];
+  }
+
+.group-chat-panel .message-meta {
+    @apply mt-0 text-[11px];
+    color: hsl(199 10% 42%);
+  }
+
+.group-chat-panel .message-row.theirs .message-meta {
+    @apply pl-1.5;
+  }
+
+.group-chat-panel .message-row.mine .message-meta {
+    @apply pr-1.5;
+  }
+
+.group-chat-panel .delivery-state,
+  .group-chat-panel .status-seen {
+    color: hsl(197 92% 47%);
+  }

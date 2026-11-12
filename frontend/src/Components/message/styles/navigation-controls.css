@@ -1,0 +1,50 @@
+.logout-btn {
+    @apply min-h-10 min-w-10 gap-2 px-2 text-sm font-semibold;
+  }
+
+.logout-btn span {
+    @apply sr-only;
+  }
+
+.icon-btn,
+  .header-tool-btn,
+  .settings-close,
+  .mobile-back {
+    @apply h-10 w-10;
+  }
+
+.logout-btn:hover,
+  .icon-btn:hover,
+  .header-tool-btn:hover:not(:disabled),
+  .header-tool-btn.active,
+  .settings-close:hover,
+  .mobile-back:hover {
+    color: hsl(200 12% 28%);
+    background: hsl(200 8% 88%);
+  }
+
+.header-tool-btn {
+    @apply cursor-pointer;
+    color: hsl(199 10% 42%);
+  }
+
+.header-tool-btn[aria-hidden="true"] {
+    @apply pointer-events-none cursor-default;
+  }
+
+.settings-btn {
+    @apply relative;
+  }
+
+.chat-list,
+  .settings-panel-body,
+  .friend-panel-list,
+  .group-user-list,
+  .global-search-results {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted-foreground) / 0.45) transparent;
+  }
+
+.chat-list {
+    @apply min-h-0 flex-1 overflow-y-auto p-0;
+  }

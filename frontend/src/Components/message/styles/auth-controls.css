@@ -1,0 +1,97 @@
+.auth-card h1 {
+    @apply m-0 bg-clip-text text-3xl font-bold text-transparent;
+    background-image: linear-gradient(135deg, hsl(173 78% 20%), hsl(173 78% 28%) 44%, hsl(226 42% 42%));
+    letter-spacing: 0;
+  }
+
+.auth-card p {
+    @apply mb-5 mt-2 max-w-[300px] text-sm leading-6 text-muted-foreground;
+  }
+
+.auth-toggle {
+    @apply mb-5 grid grid-cols-2 gap-1 rounded-[0.5rem] border p-1 shadow-inner;
+    background: hsl(205 20% 92% / 0.76);
+    border-color: hsl(0 0% 100% / 0.82);
+  }
+
+.auth-toggle button {
+    @apply rounded-[0.35rem] border border-transparent bg-transparent px-3 py-2.5 text-sm font-semibold text-muted-foreground transition;
+  }
+
+.auth-toggle button.active {
+    @apply bg-card text-foreground shadow-sm;
+  }
+
+.auth-card form {
+    @apply grid gap-2.5;
+  }
+
+.auth-card form label {
+    @apply text-sm font-semibold text-muted-foreground;
+  }
+
+.auth-card form input,
+  .group-builder input {
+    @apply w-full rounded-[0.5rem] border border-input bg-white/80 px-4 py-3 text-sm text-foreground outline-none transition backdrop-blur;
+    box-shadow:
+      inset 0 1px 0 hsl(0 0% 100% / 0.82),
+      0 1px 2px hsl(205 25% 18% / 0.04);
+  }
+
+.input-with-icon,
+  .search-field {
+    @apply flex min-h-11 items-center gap-2.5 rounded-[0.5rem] border border-input bg-white/80 px-3.5 transition backdrop-blur;
+    box-shadow:
+      inset 0 1px 0 hsl(0 0% 100% / 0.82),
+      0 1px 2px hsl(205 25% 18% / 0.04);
+  }
+
+.auth-card form input:focus,
+  .group-builder input:focus,
+  .input-with-icon:focus-within,
+  .search-field:focus-within,
+  .chat-header-search:focus-within,
+  .composer-input-shell:focus-within {
+    @apply border-ring ring-4 ring-ring/15;
+  }
+
+.search-field i,
+  .input-with-icon i {
+    @apply text-sm text-muted-foreground/70;
+  }
+
+.search-field input,
+  .input-with-icon input {
+    @apply w-full border-0 bg-transparent p-0 text-sm text-foreground outline-none;
+  }
+
+.search-field input::placeholder,
+  .input-with-icon input::placeholder,
+  .composer-input-shell textarea::placeholder,
+  .auth-card form input::placeholder,
+  .group-builder input::placeholder {
+    @apply text-muted-foreground/60;
+  }
+
+.auth-card form button,
+  .group-toggle,
+  .group-builder button,
+  .friend-row-button,
+  .send-btn {
+    @apply inline-flex items-center justify-center border border-primary/20 font-semibold text-primary-foreground shadow-soft transition;
+    background: linear-gradient(135deg, hsl(173 78% 28%), hsl(158 64% 39%));
+    box-shadow: 0 12px 26px hsl(173 78% 20% / 0.24);
+  }
+
+.auth-card form button:hover:not(:disabled),
+  .group-toggle:hover:not(:disabled),
+  .group-builder button:hover:not(:disabled),
+  .friend-row-button:hover:not(:disabled),
+  .send-btn:hover:not(:disabled) {
+    @apply -translate-y-0.5 shadow-lg;
+    filter: saturate(1.08) brightness(1.02);
+  }
+
+.auth-card form button {
+    @apply mt-2 rounded-[0.5rem] px-4 py-3;
+  }

@@ -1,0 +1,37 @@
+.user-avatar {
+    @apply relative inline-flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full font-bold shadow-none;
+    background: linear-gradient(135deg, var(--avatar-start), var(--avatar-end));
+    color: var(--avatar-text);
+    letter-spacing: 0;
+    box-shadow:
+      inset 0 0 0 1px hsl(0 0% 100% / 0.82),
+      0 6px 14px hsl(205 25% 18% / 0.10);
+  }
+
+.chat-row-avatar {
+    @apply h-14 w-14 text-sm;
+  }
+
+.sidebar-user-avatar {
+    @apply h-11 w-11 text-xs;
+  }
+
+.chat-header-avatar {
+    @apply h-10 w-10 text-xs;
+  }
+
+.message-avatar {
+    @apply hidden h-11 w-11 text-xs;
+  }
+
+.composer-avatar {
+    @apply hidden h-11 w-11 text-xs;
+  }
+
+.avatar-presence {
+    @apply absolute bottom-0.5 right-0.5 h-3.5 w-3.5 rounded-full border-2 border-card bg-muted-foreground/35;
+  }
+
+.avatar-presence.online {
+    @apply bg-accent;
+  }

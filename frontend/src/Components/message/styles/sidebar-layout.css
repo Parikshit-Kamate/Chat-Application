@@ -1,0 +1,64 @@
+.chat-layout {
+    @apply m-0 grid h-screen w-full overflow-hidden rounded-none border-0 shadow-none;
+    min-height: 100vh;
+    grid-template-columns: 420px minmax(0, 1fr);
+    background:
+      linear-gradient(180deg, hsl(0 0% 100% / 0.94), hsl(205 22% 96% / 0.92));
+    border-color: transparent;
+    box-shadow: none;
+  }
+
+.chat-sidebar {
+    @apply flex min-h-0 flex-col border-r;
+    background:
+      linear-gradient(180deg, hsl(0 0% 100% / 0.98), hsl(205 24% 98% / 0.96));
+    border-color: hsl(204 17% 82%);
+  }
+
+.sidebar-topbar {
+    @apply m-0 flex min-h-[64px] items-center justify-between rounded-none border-0 border-b px-4 py-2 shadow-none;
+    background:
+      linear-gradient(180deg, hsl(205 20% 96% / 0.98), hsl(205 18% 93% / 0.94));
+    border-color: hsl(204 17% 84%);
+  }
+
+.sidebar-top-profile {
+    @apply flex min-w-0 items-center gap-3;
+  }
+
+.sidebar-title-copy {
+    @apply grid min-w-0 gap-0.5;
+  }
+
+.sidebar-title-copy span {
+    @apply truncate text-xs text-muted-foreground;
+  }
+
+.sidebar-top-actions {
+    @apply flex items-center justify-end gap-2;
+  }
+
+.sidebar-search-strip {
+    @apply m-0 grid border-0 border-b px-3 py-2 shadow-none;
+    grid-template-columns: minmax(0, 1fr);
+    background: hsl(0 0% 100% / 0.96);
+    border-color: hsl(204 17% 88%);
+  }
+
+.sidebar-search-strip .search-field {
+    @apply min-h-9 rounded-[0.5rem] border border-transparent px-3 shadow-none;
+    background: hsl(205 20% 94%);
+  }
+
+.sidebar-search-strip .search-field:focus-within {
+    @apply border-ring/25 bg-white ring-2 ring-ring/10;
+  }
+
+.logout-btn,
+  .icon-btn,
+  .header-tool-btn,
+  .settings-close,
+  .mobile-back {
+    @apply inline-flex items-center justify-center rounded-full border-0 text-muted-foreground shadow-none transition;
+    background: transparent;
+  }

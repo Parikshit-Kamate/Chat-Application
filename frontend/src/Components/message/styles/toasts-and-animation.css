@@ -1,0 +1,29 @@
+.toast-stack {
+    @apply pointer-events-none fixed right-4 top-4 z-[1200] grid gap-2;
+  }
+
+.toast-item {
+    @apply rounded-[0.5rem] border bg-card/90 px-3.5 py-2.5 text-sm text-foreground shadow-soft backdrop-blur-xl;
+    border-color: hsl(0 0% 100% / 0.74);
+    box-shadow:
+      0 14px 34px hsl(205 24% 18% / 0.14),
+      inset 0 1px 0 hsl(0 0% 100% / 0.84);
+  }
+
+.toast-item.success {
+    @apply border-primary/40;
+  }
+
+.toast-item.warning {
+    @apply border-amber-400/45;
+  }
+
+.toast-item.danger {
+    @apply border-destructive/45;
+  }
+
+@keyframes sendButtonSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}

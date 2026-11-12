@@ -1,0 +1,55 @@
+.settings-section-grid {
+    @apply grid grid-cols-2 gap-4;
+  }
+
+.settings-search-grid {
+    @apply grid gap-3;
+  }
+
+.sidebar-section {
+    @apply grid gap-3 rounded-[0.5rem] border p-3.5 shadow-sm backdrop-blur;
+    background:
+      linear-gradient(180deg, hsl(0 0% 100% / 0.86), hsl(205 32% 98% / 0.76));
+    border-color: hsl(0 0% 100% / 0.74);
+    box-shadow:
+      0 10px 26px hsl(205 24% 18% / 0.06),
+      inset 0 1px 0 hsl(0 0% 100% / 0.82);
+  }
+
+.section-heading {
+    @apply flex items-center justify-between gap-2.5;
+  }
+
+.section-heading h3 {
+    @apply m-0 text-xs font-bold uppercase text-muted-foreground;
+    letter-spacing: 0;
+  }
+
+.global-search-results,
+  .friend-panel-list {
+    @apply grid gap-2;
+  }
+
+.global-search-results {
+    @apply max-h-56 overflow-y-auto;
+  }
+
+.global-result-item,
+  .friend-row {
+    @apply w-full rounded-[0.5rem] border bg-card/80 text-left text-foreground transition backdrop-blur;
+    border-color: hsl(204 17% 84% / 0.70);
+  }
+
+.global-result-item {
+    @apply grid gap-1 px-3 py-2.5;
+  }
+
+.global-result-item span {
+    @apply truncate text-xs text-muted-foreground;
+  }
+
+.global-result-item:hover,
+  .friend-row:not(.static):hover {
+    @apply -translate-y-0.5 border-primary/40 shadow-soft;
+    background: hsl(0 0% 100% / 0.96);
+  }

@@ -1,0 +1,61 @@
+.composer-input-shell {
+    @apply grid min-h-[42px] gap-1 rounded-[0.5rem] border border-transparent bg-white px-4 py-2.5 shadow-none outline-none transition;
+    box-shadow:
+      inset 0 1px 0 hsl(0 0% 100% / 0.90),
+      0 2px 8px hsl(205 24% 18% / 0.06);
+  }
+
+.typing-indicator {
+    @apply text-xs font-medium;
+    color: hsl(173 80% 29%);
+  }
+
+.composer-input-shell textarea {
+    @apply max-h-28 min-h-6 w-full resize-none border-0 bg-transparent p-0 text-[15px] text-foreground outline-none;
+  }
+
+.send-btn {
+    @apply h-10 w-10 shrink-0 rounded-full border-0 text-[17px] text-white shadow-none;
+    background: linear-gradient(135deg, hsl(173 78% 28%), hsl(158 64% 41%));
+    box-shadow:
+      0 10px 20px hsl(173 78% 18% / 0.22),
+      inset 0 1px 0 hsl(0 0% 100% / 0.25);
+  }
+
+.send-btn i {
+    @apply inline-flex;
+    transform: translate(1px, -0.5px);
+  }
+
+.send-btn:hover:not(:disabled) {
+    @apply translate-y-0 shadow-none;
+    background: linear-gradient(135deg, hsl(173 78% 32%), hsl(158 64% 45%));
+    filter: none;
+  }
+
+.send-btn:active:not(:disabled) {
+    transform: scale(0.96);
+  }
+
+.send-btn:disabled {
+    @apply cursor-wait opacity-80;
+    background: hsl(173 42% 51%);
+  }
+
+.send-btn-spinner {
+    @apply h-4 w-4 rounded-full border-2 border-white/40 border-t-white;
+    animation: sendButtonSpin 0.75s linear infinite;
+  }
+
+.emoji-picker {
+    @apply ml-[96px] grid grid-cols-8 gap-2 rounded-[0.5rem] border bg-card p-2.5 shadow-soft;
+    border-color: hsl(204 17% 84%);
+  }
+
+.emoji-picker button {
+    @apply rounded-[0.35rem] border-0 bg-muted py-2 text-base transition;
+  }
+
+.emoji-picker button:hover {
+    @apply bg-card shadow-sm;
+  }

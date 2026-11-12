@@ -1,0 +1,42 @@
+const PUBLIC_METHODS = [
+  'buildPairKey',
+  'completeCloudinaryUpload',
+  'computeUnreadCount',
+  'claimPendingAttachments',
+  'cleanupAbandonedUploads',
+  'createCloudinaryUploadIntent',
+  'createOrReturnDirectChat',
+  'deleteMessageAttachments',
+  'discardUploadAsset',
+  'destroyCloudinaryAsset',
+  'emitStatusUpdates',
+  'escapeRegExp',
+  'fetchChatByIdForUser',
+  'fetchChatsForUser',
+  'fetchFriendOverview',
+  'finalizeMessageAttachments',
+  'findDirectChat',
+  'hasAcceptedFriendship',
+  'idList',
+  'isChatMember',
+  'markMessagesDelivered',
+  'markMessagesSeen',
+  'normalizeAttachment',
+  'prepareMessageAttachmentsForDeletion',
+  'recordPendingUpload',
+  'releaseMessageAttachments',
+  'releaseUploadQuota',
+  'reserveUploadQuota',
+  'restoreMessageAttachments',
+  'serializeChat',
+  'serializeFriendRequest',
+  'serializeMessage',
+  'serializeUser',
+  'serializeUserValue',
+  'syncChatLastMessage',
+  'uploadToCloudinary'
+];
+
+module.exports = function selectPublicMethods(service) {
+  return Object.fromEntries(PUBLIC_METHODS.map(name => [name, service[name]]));
+};

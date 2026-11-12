@@ -1,0 +1,53 @@
+.message-footer {
+    @apply mt-1 flex min-h-4 items-end justify-end gap-2;
+  }
+
+.reply-context {
+    @apply mb-2 grid w-full gap-0.5 rounded-[0.35rem] border-0 border-l-4 px-3 py-2 text-left text-inherit;
+    background: hsl(0 0% 0% / 0.045);
+    border-left-color: hsl(173 78% 28%);
+  }
+
+.message-row.theirs .reply-context {
+    background: hsl(210 8% 94%);
+  }
+
+.reply-context strong {
+    @apply text-xs font-semibold;
+  }
+
+.reply-context span {
+    @apply truncate text-xs opacity-80;
+  }
+
+.attachment-list {
+    @apply mt-3 flex flex-wrap gap-3;
+  }
+
+.attachment-item {
+    @apply block overflow-hidden rounded-[0.45rem] border border-white/50 bg-card/80 text-inherit no-underline shadow-sm;
+  }
+
+.message-row.mine .attachment-item {
+    @apply bg-white/20;
+  }
+
+.attachment-item img {
+    @apply block h-20 w-32 object-cover;
+  }
+
+.attachment-item span {
+    @apply inline-flex items-center gap-2 px-3 py-2.5 text-sm;
+  }
+
+button.attachment-item {
+    @apply cursor-pointer text-left;
+  }
+
+button.attachment-item:disabled {
+    @apply cursor-default opacity-70;
+  }
+
+.attachment-item small {
+    @apply block px-3 pb-2 text-xs;
+  }

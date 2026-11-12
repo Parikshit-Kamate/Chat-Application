@@ -1,0 +1,84 @@
+@media (max-width: 860px) {
+  .message-shell {
+    @apply p-0;
+  }
+
+  .chat-layout {
+    @apply m-0 rounded-none border-0;
+    min-height: 100vh;
+    height: 100vh;
+    grid-template-columns: 1fr;
+  }
+
+  .chat-sidebar,
+  .chat-panel {
+    @apply min-h-screen;
+  }
+
+  .chat-sidebar.mobile-hidden,
+  .chat-panel:not(.mobile-visible) {
+    @apply hidden;
+  }
+
+  .mobile-back {
+    @apply inline-flex;
+  }
+
+  .chat-header {
+    @apply px-4 py-3.5;
+  }
+
+  .chat-header.search-open {
+    @apply gap-2;
+  }
+
+  .chat-header-search {
+    min-width: 128px;
+    width: min(240px, 38vw);
+  }
+
+  .chat-messages {
+    @apply px-3.5 py-4;
+  }
+
+  .message-stack {
+    max-width: min(88%, 560px);
+  }
+
+  .group-chat-panel .message-stack {
+    max-width: min(82%, 520px);
+  }
+
+  .chat-composer {
+    @apply p-3.5;
+  }
+
+  .reply-preview,
+  .emoji-picker {
+    @apply ml-0;
+  }
+
+  .composer-row {
+    grid-template-columns: auto auto minmax(0, 1fr) auto;
+  }
+
+  .composer-avatar {
+    @apply hidden;
+  }
+
+  .emoji-picker {
+    @apply grid-cols-6;
+  }
+
+  .sidebar-top-actions {
+    @apply grid-cols-1;
+  }
+
+  .settings-overlay {
+    @apply p-3;
+  }
+
+  .settings-panel {
+    max-height: calc(100vh - 24px);
+  }
+}

@@ -1,0 +1,29 @@
+.unread-pill {
+    @apply text-primary-foreground shadow-none;
+    background: linear-gradient(135deg, hsl(158 64% 43%), hsl(173 78% 28%));
+    box-shadow: 0 4px 10px hsl(158 64% 26% / 0.18);
+  }
+
+.settings-badge,
+  .section-heading span,
+  .friend-row-badge {
+    @apply bg-primary/10 text-primary;
+  }
+
+.sidebar-footer {
+    @apply hidden m-0 items-center rounded-none border-0 border-t p-3 shadow-none;
+    background: hsl(210 8% 94%);
+    border-color: hsl(200 8% 84%);
+  }
+
+.sidebar-user-card {
+    @apply flex items-center gap-3;
+  }
+
+.sidebar-user-copy strong {
+    @apply block text-sm font-semibold;
+  }
+
+.sidebar-user-copy span {
+    @apply mt-0.5 block text-xs text-muted-foreground;
+  }

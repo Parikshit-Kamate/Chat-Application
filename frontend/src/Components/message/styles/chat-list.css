@@ -1,0 +1,76 @@
+.chat-row {
+    @apply relative mb-0 grid w-full items-center gap-3 rounded-none border-0 border-b bg-transparent px-4 py-3 text-left transition;
+    grid-template-columns: 56px minmax(0, 1fr) auto;
+    min-height: 72px;
+    border-color: hsl(204 17% 91%);
+  }
+
+.chat-row:hover {
+    @apply translate-y-0 shadow-none;
+    background: hsl(205 24% 96%);
+    box-shadow: none;
+  }
+
+.chat-row.active {
+    @apply shadow-none;
+    background:
+      linear-gradient(90deg, hsl(173 78% 28% / 0.10), hsl(205 22% 93% / 0.86));
+    box-shadow: none;
+  }
+
+.chat-row.active::before {
+    content: '';
+    @apply absolute bottom-0 left-0 top-0 w-1 rounded-none;
+    background: linear-gradient(180deg, hsl(173 78% 28%), hsl(158 64% 43%));
+  }
+
+.chat-row-copy {
+    @apply grid min-w-0 gap-1;
+  }
+
+.chat-row-top {
+    @apply flex items-center justify-between gap-3;
+  }
+
+.chat-row-title {
+    @apply flex min-w-0 items-center gap-1.5;
+  }
+
+.chat-row-title span {
+    @apply truncate text-[15px] font-semibold text-foreground;
+  }
+
+.chat-row.active .chat-row-title span {
+    color: hsl(173 80% 27%);
+  }
+
+.chat-row-title i {
+    @apply text-xs text-muted-foreground;
+  }
+
+.chat-row-top time {
+    @apply inline-flex shrink-0 items-center gap-1 text-xs text-muted-foreground;
+  }
+
+.chat-row-top time i {
+    @apply hidden;
+  }
+
+.chat-row-preview {
+    @apply m-0 truncate text-[13px] text-muted-foreground;
+  }
+
+.chat-row-live-dots {
+    @apply inline-flex min-h-3 items-center gap-1;
+  }
+
+.chat-row-live-dots span {
+    @apply h-1.5 w-1.5 rounded-full bg-primary shadow-sm;
+  }
+
+.unread-pill,
+  .settings-badge,
+  .section-heading span,
+  .friend-row-badge {
+    @apply inline-flex h-6 min-w-6 items-center justify-center rounded-[0.35rem] px-2 text-xs font-bold;
+  }

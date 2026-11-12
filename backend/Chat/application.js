@@ -7,7 +7,7 @@ const attachmentSchema = new mongoose.Schema(
       ref: 'UploadAsset',
       default: null,
     },
-    url: { type: String, required: true, maxlength: 180000 },
+    url: { type: String, default: '', maxlength: 180000 },
     secureUrl: { type: String, default: '', maxlength: 2048 },
     publicId: { type: String, default: '', maxlength: 255 },
     fileName: { type: String, default: '', maxlength: 180 },

@@ -1,0 +1,65 @@
+.chat-panel {
+    @apply relative flex min-h-0 flex-col bg-background;
+    background: hsl(198 34% 97%);
+  }
+
+.empty-panel {
+    @apply m-auto grid max-w-[420px] gap-2 rounded-[0.5rem] border px-6 py-5 text-center text-sm text-muted-foreground shadow-soft backdrop-blur-xl;
+    background:
+      linear-gradient(180deg, hsl(0 0% 100% / 0.92), hsl(205 28% 98% / 0.82));
+    border-color: hsl(0 0% 100% / 0.76);
+  }
+
+.empty-panel strong {
+    @apply text-base font-semibold text-foreground;
+  }
+
+.chat-header {
+    @apply sticky top-0 z-10 m-0 flex min-h-[64px] items-center justify-between gap-3 rounded-none border-0 border-b px-4 py-2 shadow-none;
+    background:
+      linear-gradient(180deg, hsl(205 20% 96% / 0.98), hsl(205 18% 93% / 0.94));
+    border-color: hsl(204 17% 84%);
+    box-shadow: none;
+  }
+
+.mobile-back {
+    @apply hidden;
+  }
+
+.chat-header-copy {
+    @apply mr-auto grid min-w-0 flex-1 gap-0.5;
+  }
+
+.chat-header-copy h3 {
+    @apply m-0 truncate text-[16px] font-semibold text-foreground;
+  }
+
+.chat-header-copy small {
+    @apply truncate text-[13px] text-muted-foreground;
+  }
+
+.chat-header-search {
+    @apply flex min-h-10 min-w-[220px] shrink-0 items-center gap-2 rounded-[0.5rem] border border-transparent bg-white px-3 text-muted-foreground transition;
+    width: min(360px, 36vw);
+    box-shadow: 0 2px 8px hsl(205 24% 18% / 0.06);
+  }
+
+.chat-header-search input {
+    @apply min-w-0 flex-1 border-0 bg-transparent p-0 text-sm text-foreground outline-none;
+  }
+
+.chat-header-search input::placeholder {
+    @apply text-muted-foreground/60;
+  }
+
+.chat-header-search button {
+    @apply inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-0 bg-transparent text-muted-foreground transition;
+  }
+
+.chat-header-search button:hover {
+    @apply bg-muted text-primary;
+  }
+
+.header-actions {
+    @apply flex items-center gap-1;
+  }

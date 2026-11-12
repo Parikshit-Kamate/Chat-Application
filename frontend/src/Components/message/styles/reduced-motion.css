@@ -1,0 +1,20 @@
+@media (prefers-reduced-motion: reduce) {
+  .message-row,
+  .logout-btn,
+  .icon-btn,
+  .send-btn,
+  .header-tool-btn,
+  .settings-close,
+  .settings-logout-btn,
+  .friend-row,
+  .friend-row-button,
+  .group-toggle,
+  .group-builder button {
+    animation: none;
+    transition: none;
+  }
+
+  .send-btn-spinner {
+    animation: none;
+  }
+}

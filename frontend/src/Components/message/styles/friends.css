@@ -1,0 +1,60 @@
+.friend-row {
+    @apply flex items-center justify-between gap-2.5 px-3 py-2.5;
+  }
+
+.friend-row.static {
+    @apply cursor-default;
+  }
+
+.friend-row:disabled,
+  .friend-row-button:disabled,
+  .group-builder button:disabled,
+  .group-toggle:disabled,
+  .settings-danger-btn:disabled,
+  .send-btn:disabled,
+  .auth-card form button:disabled {
+    @apply translate-y-0 opacity-70 shadow-none;
+  }
+
+.friend-row-main {
+    @apply grid min-w-0 gap-0.5;
+  }
+
+.friend-row-main strong {
+    @apply truncate text-sm font-semibold;
+  }
+
+.friend-row-main small {
+    @apply text-xs text-muted-foreground;
+  }
+
+.friend-row-actions {
+    @apply flex items-center gap-1.5;
+  }
+
+.friend-row-badge.pending {
+    @apply bg-amber-400/15 text-amber-700;
+  }
+
+.friend-row-button,
+  .group-toggle,
+  .group-builder button {
+    @apply rounded-[0.5rem] px-3 py-2 text-xs;
+  }
+
+.friend-row-button.accept {
+    @apply border-primary bg-primary text-primary-foreground;
+  }
+
+.friend-row-button.ghost {
+    @apply border-input bg-card text-muted-foreground shadow-none;
+    background-image: none;
+  }
+
+.friend-row-button.ghost:hover:not(:disabled) {
+    @apply border-destructive/35 bg-destructive/10 text-destructive;
+  }
+
+.friend-row-button.ghost.danger {
+    @apply text-destructive;
+  }

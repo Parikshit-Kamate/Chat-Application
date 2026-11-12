@@ -1,0 +1,15 @@
+@media (max-width: 1180px) {
+  .chat-layout {
+    grid-template-columns: 360px minmax(0, 1fr);
+  }
+
+  .message-stack {
+    max-width: min(74%, 680px);
+  }
+}
+
+@media (max-width: 960px) {
+  .settings-section-grid {
+    @apply grid-cols-1;
+  }
+}

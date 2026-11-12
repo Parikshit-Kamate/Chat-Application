@@ -1,0 +1,51 @@
+.message-bubble {
+    @apply relative min-w-[76px] rounded-[0.45rem] border-0 px-3 py-1.5 text-foreground shadow-sm;
+    background: hsl(0 0% 100%);
+    box-shadow:
+      0 1px 0.5px hsl(0 0% 0% / 0.13),
+      0 8px 18px hsl(205 24% 18% / 0.035);
+  }
+
+.message-row.theirs .message-bubble {
+    border-top-left-radius: 0.05rem;
+  }
+
+.message-row.mine .message-bubble {
+    @apply text-foreground;
+    background: linear-gradient(180deg, hsl(111 91% 91%), hsl(105 86% 88%));
+    box-shadow:
+      0 1px 0.5px hsl(0 0% 0% / 0.12),
+      0 8px 18px hsl(105 44% 22% / 0.04);
+    border-top-right-radius: 0.05rem;
+  }
+
+.message-row.theirs .message-bubble::before,
+  .message-row.mine .message-bubble::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 8px solid currentColor;
+  }
+
+.message-row.theirs .message-bubble::before {
+    left: -7px;
+    color: hsl(0 0% 100%);
+    border-left: 8px solid transparent;
+  }
+
+.message-row.mine .message-bubble::before {
+    right: -7px;
+    color: hsl(111 91% 91%);
+    border-right: 8px solid transparent;
+  }
+
+.message-row.highlighted .message-bubble {
+    @apply ring-2 ring-amber-300/70;
+  }
+
+.message-bubble p {
+    @apply m-0 text-[14.5px] leading-[1.45];
+    word-break: break-word;
+  }

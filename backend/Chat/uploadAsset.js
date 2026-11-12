@@ -13,6 +13,7 @@ const uploadAssetSchema = new mongoose.Schema(
       enum: ['cloudinary', 'data-url'],
       required: true,
     },
+    deliveryType: { type: String, enum: ['upload', 'authenticated'], default: 'upload' },
     status: {
       type: String,
       enum: ['uploading', 'pending', 'claiming', 'attached', 'deleting'],

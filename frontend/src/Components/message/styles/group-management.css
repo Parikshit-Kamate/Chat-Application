@@ -1,0 +1,71 @@
+.group-management-section {
+    @apply gap-3.5;
+  }
+
+.group-name-editor {
+    @apply flex items-center gap-2;
+  }
+
+.group-name-editor input {
+    @apply min-w-0 flex-1 rounded-[0.5rem] border bg-card/80 px-3 py-2 text-sm outline-none transition;
+    border-color: hsl(204 17% 84% / 0.72);
+  }
+
+.group-name-editor input:focus {
+    @apply border-primary/45 shadow-soft;
+  }
+
+.group-name-editor input:disabled {
+    @apply bg-muted/70 text-muted-foreground;
+  }
+
+.group-name-editor button,
+  .settings-danger-btn {
+    @apply inline-flex shrink-0 items-center justify-center gap-2 rounded-[0.5rem] border px-3 py-2 text-xs font-semibold transition;
+  }
+
+.group-name-editor button {
+    @apply border-primary bg-primary text-primary-foreground;
+  }
+
+.group-member-list {
+    @apply grid max-h-56 gap-2 overflow-y-auto;
+  }
+
+.group-member-row {
+    @apply items-start;
+  }
+
+.group-builder.compact {
+    @apply bg-card/60;
+  }
+
+.section-heading.small h3 {
+    @apply text-[11px];
+  }
+
+.settings-danger-btn {
+    @apply border-destructive/25 text-destructive;
+    background: hsl(0 84% 60% / 0.08);
+  }
+
+.settings-danger-btn:hover:not(:disabled) {
+    @apply bg-destructive text-destructive-foreground shadow-soft;
+  }
+
+.group-builder {
+    @apply grid gap-2.5 rounded-[0.5rem] border bg-muted/60 p-3 backdrop-blur;
+    border-color: hsl(0 0% 100% / 0.72);
+  }
+
+.group-user-list {
+    @apply grid max-h-40 gap-2 overflow-y-auto rounded-[0.45rem] border border-dashed bg-card/75 p-2.5;
+  }
+
+.group-user-list label {
+    @apply flex items-center gap-2 text-sm text-muted-foreground;
+  }
+
+.group-user-list input {
+    @apply h-4 w-4 accent-[hsl(var(--primary))];
+  }

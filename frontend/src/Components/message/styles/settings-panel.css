@@ -1,0 +1,68 @@
+.settings-overlay {
+    @apply fixed inset-0 z-[60] flex items-center justify-center bg-foreground/25 p-6 backdrop-blur-xl;
+    background:
+      linear-gradient(135deg, hsl(205 34% 12% / 0.36), hsl(173 78% 20% / 0.22)),
+      hsl(205 34% 12% / 0.18);
+  }
+
+.settings-panel {
+    @apply flex w-full max-w-[1040px] flex-col overflow-hidden rounded-[0.5rem] border shadow-panel backdrop-blur-2xl;
+    max-height: min(90vh, 920px);
+    background:
+      linear-gradient(180deg, hsl(0 0% 100% / 0.96), hsl(205 28% 97% / 0.90)),
+      linear-gradient(90deg, hsl(173 78% 28% / 0.08), hsl(226 42% 45% / 0.06));
+    border-color: hsl(0 0% 100% / 0.78);
+    box-shadow:
+      0 38px 100px hsl(205 34% 12% / 0.28),
+      inset 0 1px 0 hsl(0 0% 100% / 0.82);
+  }
+
+.settings-panel-header {
+    @apply m-3 flex items-start justify-between gap-3 rounded-[0.5rem] border bg-card/90 px-5 py-4 shadow-sm;
+    border-color: hsl(0 0% 100% / 0.78);
+    background:
+      linear-gradient(135deg, hsl(0 0% 100% / 0.94), hsl(173 38% 96% / 0.84));
+  }
+
+.settings-panel-header h3 {
+    @apply m-0 text-lg font-semibold;
+  }
+
+.settings-panel-header p {
+    @apply mb-0 mt-1 text-sm text-muted-foreground;
+  }
+
+.settings-panel-body {
+    @apply overflow-y-auto p-4;
+  }
+
+.settings-account-card {
+    @apply mb-4 flex items-center justify-between gap-4 rounded-[0.5rem] border bg-card/90 px-4 py-3 shadow-sm;
+    border-color: hsl(204 17% 84% / 0.72);
+    background:
+      linear-gradient(135deg, hsl(0 0% 100% / 0.94), hsl(205 28% 98% / 0.86));
+  }
+
+.settings-account-copy {
+    @apply grid min-w-0 gap-0.5;
+  }
+
+.settings-account-copy strong {
+    @apply truncate text-sm font-semibold text-foreground;
+  }
+
+.settings-account-copy span {
+    @apply truncate text-xs text-muted-foreground;
+  }
+
+.settings-logout-btn {
+    @apply inline-flex shrink-0 items-center justify-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold text-destructive transition;
+    background: hsl(0 84% 60% / 0.08);
+    border-color: hsl(0 84% 60% / 0.22);
+  }
+
+.settings-logout-btn:hover {
+    @apply text-white shadow-soft;
+    background: hsl(0 84% 60%);
+    border-color: hsl(0 84% 60%);
+  }

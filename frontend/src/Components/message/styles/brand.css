@@ -1,0 +1,66 @@
+.brand-hero {
+    @apply mb-6 flex items-center gap-4;
+  }
+
+.brand-mark {
+    @apply relative h-20 w-20 shrink-0 overflow-hidden rounded-[0.5rem] shadow-soft;
+    isolation: isolate;
+    background:
+      conic-gradient(from 220deg, hsl(173 78% 22%), hsl(173 78% 30%), hsl(158 64% 43%), hsl(226 42% 45%), hsl(173 78% 22%));
+    box-shadow:
+      0 22px 46px hsl(173 78% 22% / 0.28),
+      inset 0 0 0 1px hsl(0 0% 100% / 0.22);
+  }
+
+.brand-mark::before {
+    content: '';
+    @apply absolute inset-2 rounded-[0.4rem] border border-white/20;
+  }
+
+.brand-mark::after {
+    content: '';
+    @apply absolute bottom-3 right-3 h-4 w-4 rounded-full bg-white/30;
+  }
+
+.brand-bubble {
+    @apply absolute block;
+  }
+
+.brand-bubble-primary {
+    @apply left-4 top-4 h-8 w-10 rounded-[0.5rem] bg-white shadow-sm;
+    border-bottom-left-radius: 0.18rem;
+  }
+
+.brand-bubble-primary::after {
+    content: none;
+  }
+
+.brand-bubble-secondary {
+    @apply bottom-4 right-4 h-6 w-7 rounded-[0.5rem] bg-slate-950/90 shadow-sm;
+    border-bottom-right-radius: 0.16rem;
+  }
+
+.brand-bubble-secondary::after {
+    content: none;
+  }
+
+.brand-spark {
+    @apply absolute h-1.5 w-1.5 rounded-full bg-white/90;
+  }
+
+.brand-spark-one {
+    @apply right-4 top-4;
+  }
+
+.brand-spark-two {
+    @apply bottom-4 left-5 h-1 w-1 opacity-75;
+  }
+
+.brand-copy {
+    @apply min-w-0;
+  }
+
+.brand-kicker {
+    @apply mb-2 inline-flex rounded-[0.5rem] border border-primary/15 bg-primary/10 px-3 py-1.5 text-xs font-bold uppercase text-primary shadow-sm;
+    letter-spacing: 0;
+  }

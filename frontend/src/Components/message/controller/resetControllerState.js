@@ -1,0 +1,48 @@
+import { EMPTY_MESSAGE_PAGE_INFO } from './messagePaging';
+import { TOKEN_KEY } from '../constants';
+
+export function resetControllerState(state, { token = '', user = null, authForm } = {}) {
+  if (token) localStorage.setItem(TOKEN_KEY, token);
+  else localStorage.removeItem(TOKEN_KEY);
+  state.setToken(token);
+  state.setCurrentUser(user);
+  state.setAuthMode('login');
+  state.setAuthForm(authForm || { firstName: '', lastName: '', username: '', password: '' });
+  state.setAuthLoading(false);
+  state.setAuthInitializing(false);
+  state.setUsers([]);
+  state.setFriends([]);
+  state.setIncomingRequests([]);
+  state.setOutgoingRequests([]);
+  state.setChats([]);
+  state.setActiveChatId(null);
+  state.setMessages([]);
+  state.setMessagePageInfo(EMPTY_MESSAGE_PAGE_INFO);
+  state.setHasLoadedInitialChats(false);
+  state.setSidebarSearch('');
+  state.setMessageSearch('');
+  state.setGlobalSearch('');
+  state.setGlobalResults([]);
+  state.setHighlightMessageId('');
+  state.setFriendSearch('');
+  state.setFriendSearchResults([]);
+  state.setGroupForm({ name: '', memberIds: [] });
+  state.setGroupBuilderOpen(false);
+  state.setMessageText('');
+  state.setReplyTarget(null);
+  state.setShowEmojiPicker(false);
+  state.setPendingAttachments([]);
+  state.setUploading(false);
+  state.setTypingUsers([]);
+  state.setIsLoadingChats(false);
+  state.setIsLoadingMessages(false);
+  state.setIsLoadingOlderMessages(false);
+  state.setIsLoadingFriends(false);
+  state.setIsSearchingUsers(false);
+  state.setFriendActionKey('');
+  state.setGroupActionKey('');
+  state.setIsSettingsOpen(false);
+  state.setMessageContextMenu(null);
+  state.setMessageActionKey('');
+  state.setToasts([]);
+}
